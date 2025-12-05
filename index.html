@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Piyush Gupta • Technical Support Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Piyush Gupta, Technical Support Engineer specializing in L1/L2 support, incident analysis, remote troubleshooting, and DevOps fundamentals." />
+  <meta property="og:title" content="Piyush Gupta • Technical Support Engineer" />
+  <meta property="og:description" content="Modern portfolio of Piyush Gupta showcasing technical support, incident analysis, and DevOps projects." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: rgba(15, 23, 42, 0.8);
+      --card-bg: rgba(15, 23, 42, 0.75);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #6366f1;
+      --accent-soft: rgba(99, 102, 241, 0.3);
+      --accent-2: #a855f7;
+      --border-subtle: rgba(148, 163, 184, 0.2);
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.7);
+      --radius-2xl: 1.25rem;
+      --nav-height: 72px;
+      --transition-fast: 0.22s ease-out;
+    }
+
+    body.light-theme {
+      --bg: #f9fafb;
+      --bg-alt: rgba(255, 255, 255, 0.9);
+      --card-bg: rgba(255, 255, 255, 0.98);
+      --text: #020617;
+      --muted: #4b5563;
+      --border-subtle: rgba(148, 163, 184, 0.35);
+      --shadow-soft: 0 14px 36px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.05), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(147, 51, 234, 0.09), transparent 60%),
+        radial-gradient(circle at top right, rgba(79, 70, 229, 0.1), transparent 65%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .layout {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(248, 250, 252, 0.96), transparent);
+    }
+
+    body:not(.light-theme) header {
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), transparent);
+    }
+
+    .nav {
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 30% 0, #4f46e5, #a855f7);
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(79, 70, 229, 0.4);
+    }
+
+    .brand-text-main {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-text-sub {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 0.15rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #4f46e5, #a855f7);
+      transition: width var(--transition-fast);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.85rem;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      background: transparent;
+      color: inherit;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .btn-primary {
+      background: linear-gradient(120deg, #4f46e5, #a855f7);
+      color: white;
+      box-shadow: 0 10px 26px rgba(79, 70, 229, 0.5);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px rgba(79, 70, 229, 0.7);
+    }
+
+    .btn-outline {
+      border-color: var(--border-subtle);
+      background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.15), transparent 55%);
+    }
+
+    .btn-outline:hover {
+      background: rgba(241, 245, 249, 0.9);
+      transform: translateY(-1px);
+    }
+
+    body:not(.light-theme) .btn-outline:hover {
+      background: rgba(15, 23, 42, 0.5);
+    }
+
+    .theme-toggle {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      display: grid;
+      place-items: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      background: radial-gradient(circle at 30% 0, rgba(148, 163, 184, 0.3), transparent 55%);
+      transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .theme-toggle:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+    }
+
+    .nav-toggle {
+      display: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    main {
+      padding-bottom: 4rem;
+    }
+
+    .hero {
+      padding: 3.2rem 0 2.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 2.8rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 0.2rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      gap: 0.4rem;
+      align-items: center;
+      margin-bottom: 0.9rem;
+      background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.08), transparent 55%);
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 4vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(120deg, #4f46e5, #a855f7);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 36rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-highlight {
+      margin-bottom: 1.1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
+    .hero-highlight span {
+      padding: 0.2rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.18), transparent 55%);
+      font-size: 0.75rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      border: 1px dashed rgba(148, 163, 184, 0.4);
+      background: rgba(248, 250, 252, 0.9);
+    }
+
+    body:not(.light-theme) .hero-meta-item {
+      background: rgba(15, 23, 42, 0.45);
+    }
+
+    .hero-meta-item i {
+      font-size: 1rem;
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-card {
+      border-radius: 1.6rem;
+      padding: 1.4rem 1.3rem;
+      background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.1), transparent 55%), var(--card-bg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: 0.95rem;
+    }
+
+    .hero-avatar-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .hero-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 1.4rem;
+      background: conic-gradient(from 200deg, #4f46e5, #a855f7, #22c55e, #4f46e5);
+      padding: 2px;
+    }
+
+    .hero-avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: radial-gradient(circle at 30% 0, #020617, #020617);
+      display: grid;
+      place-items: center;
+      color: #e5e7eb;
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+
+    .hero-avatar-text h2 {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .hero-avatar-text p {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .hero-badge {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(248, 250, 252, 0.95);
+    }
+
+    body:not(.light-theme) .hero-badge {
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .hero-stat-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.1rem;
+      font-size: 0.75rem;
+      margin-top: 0.4rem;
+    }
+
+    .hero-stat {
+      flex: 1;
+      padding: 0.5rem 0.7rem;
+      border-radius: 0.9rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.08), transparent 60%);
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    .hero-floating-tag {
+      position: absolute;
+      top: -18px;
+      right: -6px;
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(129, 140, 248, 0.7);
+      background: radial-gradient(circle at 30% 0, rgba(79, 70, 229, 0.9), rgba(129, 140, 248, 0.95));
+      color: #e5e7eb;
+      box-shadow: 0 14px 40px rgba(79, 70, 229, 0.9);
+    }
+
+    .hero-orbit {
+      position: absolute;
+      inset: -40px;
+      border-radius: 50%;
+      border: 1px dashed rgba(148, 163, 184, 0.35);
+      opacity: 0.4;
+    }
+
+    .hero-orbit-dot {
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #22c55e;
+      top: 8%;
+      right: 19%;
+      box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.18);
+    }
+
+    /* Sections */
+    section {
+      padding: 2.5rem 0 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 26rem;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 1.8rem;
+    }
+
+    .about-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.65;
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .pill {
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.75rem;
+      color: var(--muted);
+      background: rgba(248, 250, 252, 0.95);
+    }
+
+    body:not(.light-theme) .pill {
+      background: rgba(15, 23, 42, 0.6);
+    }
+
+    .about-card {
+      border-radius: 1.3rem;
+      padding: 1rem;
+      border: 1px solid var(--border-subtle);
+      background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.25), transparent 60%), var(--card-bg);
+      box-shadow: var(--shadow-soft);
+      font-size: 0.8rem;
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .about-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .about-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .about-meta-item i {
+      font-size: 1rem;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
+      gap: 1.8rem;
+    }
+
+    .skill-list {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .skill-item {
+      display: grid;
+      gap: 0.3rem;
+    }
+
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+
+    .skill-bar {
+      position: relative;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(229, 231, 235, 0.9);
+      overflow: hidden;
+    }
+
+    body:not(.light-theme) .skill-bar {
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .skill-bar-fill {
+      position: absolute;
+      inset: 0;
+      width: 0;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #4f46e5, #a855f7);
+      transition: width 1.1s ease-out;
+    }
+
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      font-size: 0.75rem;
+    }
+
+    .skills-tags .pill {
+      border-style: dashed;
+    }
+
+    /* Experience */
+    .timeline {
+      position: relative;
+      padding-left: 1.4rem;
+      display: grid;
+      gap: 1.2rem;
+      font-size: 0.85rem;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0.25rem;
+      bottom: 0.25rem;
+      left: 0.27rem;
+      width: 1px;
+      background: linear-gradient(to bottom, rgba(148, 163, 184, 0.7), transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 0.9rem;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -0.15rem;
+      top: 0.35rem;
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #4f46e5;
+      box-shadow: 0 0 0 5px rgba(79, 70, 229, 0.3);
+    }
+
+    .timeline-role {
+      font-weight: 600;
+    }
+
+    .timeline-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    /* Services / Projects / Testimonials / Blog */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .card {
+      border-radius: 1.2rem;
+      padding: 1rem;
+      border: 1px solid var(--border-subtle);
+      background: var(--card-bg);
+      box-shadow: var(--shadow-soft);
+      font-size: 0.85rem;
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .card-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      font-size: 1.1rem;
+      background: radial-gradient(circle at 30% 0, rgba(79, 70, 229, 0.9), rgba(168, 85, 247, 0.95));
+      color: #e5e7eb;
+      box-shadow: 0 12px 28px rgba(79, 70, 229, 0.7);
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .card-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      font-size: 0.7rem;
+    }
+
+    .chip {
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .card-link {
+      margin-top: 0.2rem;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      color: #a855f7;
+    }
+
+    .project-thumb 
+           .project-thumb {
+      border-radius: 0.9rem;
+      border: 1px solid var(--border-subtle);
+      background: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(168, 85, 247, 0.12));
+      padding: 1rem 1.1rem;
+      min-height: 120px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+    }
+
+    body:not(.light-theme) .project-thumb {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 64, 175, 0.9));
+    }
+
+    .project-thumb-main {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .project-thumb-sub {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .project-thumb-pill {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(248, 250, 252, 0.9);
+      white-space: nowrap;
+    }
+
+    body:not(.light-theme) .project-thumb-pill {
+      background: rgba(15, 23, 42, 0.85);
+      color: #e5e7eb;
+    }
+
+
+    .project-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-thumb-label {
+      position: absolute;
+      left: 0.6rem;
+      right: 0.6rem;
+      bottom: 0.6rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      color: #e5e7eb;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 30% 0, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.85));
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+    }
+
+
+    .testimonial-quote {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.8rem;
+    }
+
+    form {
+      display: grid;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    label {
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    input,
+    textarea {
+      border-radius: 0.8rem;
+      border: 1px solid var(--border-subtle);
+      padding: 0.6rem 0.75rem;
+      background: rgba(255, 255, 255, 0.98);
+      color: inherit;
+      font-family: inherit;
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), transform 0.12s ease-out;
+    }
+
+    body:not(.light-theme) input,
+    body:not(.light-theme) textarea {
+      background: rgba(15, 23, 42, 0.75);
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: rgba(129, 140, 248, 0.9);
+      box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.6), 0 10px 32px rgba(15, 23, 42, 0.2);
+      transform: translateY(-1px);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-aside {
+      border-radius: 1.3rem;
+      padding: 1rem;
+      border: 1px solid var(--border-subtle);
+      background: radial-gradient(circle at top left, rgba(168, 85, 247, 0.15), transparent 60%), var(--card-bg);
+      box-shadow: var(--shadow-soft);
+      font-size: 0.82rem;
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+    }
+
+    .contact-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 1rem;
+      background: rgba(248, 250, 252, 0.95);
+    }
+
+    body:not(.light-theme) .contact-icon {
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    /* Footer */
+    footer {
+      padding: 2.4rem 0 2rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .social-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .social-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border-subtle);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .social-icon:hover {
+      background: radial-gradient(circle at 30% 0, rgba(79, 70, 229, 0.98), rgba(168, 85, 247, 0.98));
+      color: #e5e7eb;
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(79, 70, 229, 0.9);
+      border-color: transparent;
+    }
+
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+    .tech-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.55rem;
+    }
+
+    .tech-icons img {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      padding: 3px;
+      background: #f3f4f6;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+    }
+
+    body:not(.light-theme) .tech-icons img {
+      background: #020617;
+    }
+
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .hero-orbit {
+        display: none;
+      }
+
+      .skills-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        position: absolute;
+        inset-inline: 1.25rem;
+        top: calc(var(--nav-height) - 8px);
+        border-radius: 1.2rem;
+        border: 1px solid var(--border-subtle);
+        background: var(--bg-alt);
+        padding: 0.75rem 0.9rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.9rem;
+        transform-origin: top;
+        transform: scaleY(0.9);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--transition-fast), transform var(--transition-fast);
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: scaleY(1);
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .grid-3 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-top: 2rem;
+      }
+
+      section {
+        padding-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body class="light-theme">
+  <header>
+    <div class="layout nav">
+      <div class="brand">
+        <div class="brand-logo">P</div>
+        <div>
+          <div class="brand-text-main">Piyush Gupta</div>
+          <div class="brand-text-sub">Technical Support Engineer</div>
+        </div>
+      </div>
+
+      <nav>
+        <div class="nav-toggle" id="navToggle">
+          <i class="ri-menu-3-line"></i>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#services">Services</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="ri-moon-line" id="themeIcon"></i>
+        </button>
+        <a href="#contact" class="btn btn-outline">
+          <i class="ri-message-3-line"></i>
+          Let’s Talk
+        </a>
+        <a href="portfolio/assets/piyush-gupta-resume.pdf" class="btn btn-primary">
+          <i class="ri-download-2-line"></i>
+          Download CV
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-left reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Open to Technical Support & Application Support roles
+        </div>
+        <h1 class="hero-title">
+          Turning <span>incidents into insights</span> and stable user experiences.
+        </h1>
+        <p class="hero-subtitle">
+          I’m a Technical Support Engineer with 8+ years in L1/L2 support, application troubleshooting,
+          remote assistance, and incident analysis — now adding DevOps & cloud skills to make systems
+          more reliable and easier to run.
+        </p>
+        <div class="hero-highlight">
+          <span>8+ years in technical & application support</span>
+          <span>Incident analysis & root cause</span>
+          <span>Remote tools • Documentation • DevOps basics</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">
+            <i class="ri-send-plane-line"></i>
+            Hire Me for Support Role
+          </a>
+          <a href="#projects" class="btn btn-outline">
+            <i class="ri-eye-line"></i>
+            View My Projects
+          </a>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <i class="ri-time-line"></i>
+            Fast, clear communication with users & teams
+          </div>
+          <div class="hero-meta-item">
+            <i class="ri-tools-line"></i>
+            Ticketing · Remote access · Monitoring · DevOps tools
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="hero-orbit"></div>
+        <div class="hero-orbit-dot"></div>
+
+        <div class="hero-card">
+          <div class="hero-avatar-row">
+            <div class="hero-avatar">
+              <div class="hero-avatar-inner">
+                <span>PG</span>
+              </div>
+            </div>
+            <div class="hero-avatar-text">
+              <h2>Piyush Gupta</h2>
+              <p>Technical Support & Application Support • Indore, India</p>
+            </div>
+          </div>
+          <div class="hero-badges">
+            <span class="hero-badge">L1 / L2 Support</span>
+            <span class="hero-badge">Remote Troubleshooting</span>
+            <span class="hero-badge">Incident Analysis</span>
+            <span class="hero-badge">DevOps Fundamentals</span>
+          </div>
+          <div class="hero-stat-row">
+            <div class="hero-stat">
+              <strong>10,000+ Tickets handled</strong>
+              <span>Across application, technical & user issues.</span>
+            </div>
+            <div class="hero-stat">
+              <strong>High CSAT</strong>
+              <span>Focused on clear updates & communication.</span>
+            </div>
+          </div>
+          <div class="hero-stat-row">
+            <div class="hero-stat">
+              <strong>Incident analysis</strong>
+              <span>Patterns, RCA notes & knowledge base updates.</span>
+            </div>
+            <div class="hero-stat">
+              <strong>Hands-on labs</strong>
+              <span>GitHub, Docker, Terraform & Kubernetes.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-floating-tag">
+          <i class="ri-sparkling-2-line"></i>
+          Support mindset • Engineering approach
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-eyebrow">About</div>
+          <h2 class="section-title">Technical support with strong incident & system understanding.</h2>
+        </div>
+        <p class="section-subtitle">
+          I work at the intersection of users, applications, and infrastructure — keeping systems
+          running and explaining issues in simple language.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I started my career in technical support and application support, working directly with end users,
+            tracking incidents, and coordinating with development and infrastructure teams. Over time, I
+            developed a deep understanding of how production systems behave under real usage.
+          </p>
+          <p>
+            Along with day-to-day support, I focus on documenting fixes, finding patterns in incidents, and
+            suggesting improvements. Recently, I’ve been actively learning and practicing DevOps tools like
+            GitHub, Docker, Terraform, and Kubernetes to understand the backend of the applications I support.
+          </p>
+          <div class="about-tags">
+            <span class="pill">L1 / L2 technical support</span>
+            <span class="pill">Remote access & troubleshooting</span>
+            <span class="pill">Incident & problem management</span>
+            <span class="pill">Knowledge base & documentation</span>
+          </div>
+        </div>
+
+        <aside class="about-card reveal">
+          <div class="about-meta">
+            <div class="about-meta-item">
+              <i class="ri-customer-service-2-line"></i>
+              <span>8+ years supporting business-critical applications and users.</span>
+            </div>
+            <div class="about-meta-item">
+              <i class="ri-bug-line"></i>
+              <span>Strong on logs, error analysis, and step-by-step reproduction.</span>
+            </div>
+            <div class="about-meta-item">
+              <i class="ri-article-line"></i>
+              <span>Writes clear incident notes, RCA points, and internal KB articles.</span>
+            </div>
+            <div class="about-meta-item">
+              <i class="ri-cloud-line"></i>
+              <span>Building DevOps & cloud skills to support modern systems better.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-eyebrow">Skills</div>
+          <h2 class="section-title">Support-focused skills with DevOps fundamentals.</h2>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-list reveal">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Technical & Application Support</span>
+              <span>95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-skill="95"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Incident Analysis & Troubleshooting</span>
+              <span>92%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-skill="92"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Remote Support & User Handling</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-skill="90"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Documentation & Knowledge Base</span>
+              <span>88%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-skill="88"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>DevOps & Cloud Fundamentals</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" data-skill="80"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <p class="section-subtitle" style="margin-bottom: 0.8rem;">
+            Tools & technologies I use across support, analysis, reporting, and DevOps practice labs.
+          </p>
+          <div class="skills-tags">
+            <span class="pill">Ticketing tools (Jira / Service desk)</span>
+            <span class="pill">Remote tools (AnyDesk / TeamViewer / Zoho Assist)</span>
+            <span class="pill">Windows & basic Linux</span>
+            <span class="pill">Network & system basics</span>
+            <span class="pill">SQL (basic queries)</span>
+            <span class="pill">Power BI (reports & dashboards)</span>
+            <span class="pill">Excel (advanced)</span>
+            <span class="pill">Git & GitHub</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Terraform</span>
+            <span class="pill">Kubernetes (labs)</span>
+            <span class="pill">HTML / CSS / JavaScript</span>
+            <span class="pill">Basic JSON APIs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    
+    
+        <!-- Experience -->
+    <section id="experience">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-eyebrow">Experience</div>
+          <h2 class="section-title">Supporting users, analyzing incidents, and learning DevOps.</h2>
+        </div>
+      </div>
+
+      <div class="timeline reveal">
+        <!-- 47Billion -->
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-role">Technical Support Engineer – IT Operations & Application Support</div>
+          <div class="timeline-meta">47Billion Private Limited, Indore • June 2023 – October 2025</div>
+          <p>
+            Delivered L1/L2 remote support for 2000+ digital signage endpoints and 150+ production servers across
+            USA/Canada, working closely with infra and customer teams.
+          </p>
+          <p>
+            Automated monitoring and deployment processes using Python &amp; Bash, reducing operational workload
+            by 60% and improving consistency of changes.
+          </p>
+          <p>
+            Improved MTTR by 35% through better escalation workflows, log analysis techniques, and proactive
+            monitoring improvements.
+          </p>
+          <p>
+            Built Power BI dashboards for system performance, failure analytics and capacity planning, giving
+            leaders real-time visibility.
+          </p>
+          <p>
+            Reduced recurring incident volume by 30% through structured RCA, preventive maintenance and follow-up
+            actions.
+          </p>
+          <p>
+            Created SOPs, troubleshooting guides and configuration documentation that improved onboarding and team
+            productivity.
+          </p>
+        </article>
+
+        <!-- Intallis -->
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-role">Senior Technical Support Engineer – IT Infrastructure</div>
+          <div class="timeline-meta">Intallis, Noida (Remote) • July 2022 – June 2023</div>
+          <p>
+            Managed enterprise server &amp; network support operations, handling infrastructure outages,
+            performance issues and critical escalations.
+          </p>
+          <p>
+            Diagnosed server, storage, virtualization and networking issues to ensure minimal production
+            downtime and fast restoration.
+          </p>
+          <p>
+            Built runbooks and SOP documentation that improved First Contact Resolution and made daily operations
+            more consistent.
+          </p>
+        </article>
+
+        <!-- TaskUs / Revolut -->
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-role">Technical Support Engineer – Application Support (FinTech – Revolut)</div>
+          <div class="timeline-meta">TaskUs, Indore • March 2021 – April 2022</div>
+          <p>
+            Supported customer platform performance, authentication, and account provisioning issues across a
+            fast-moving FinTech environment.
+          </p>
+          <p>
+            Handled 50+ tickets daily with ~98% SLA compliance by using clear prioritization, proper
+            documentation and structured escalation handling.
+          </p>
+          <p>
+            Developed automated reporting dashboards using Python and Excel, improving visibility and reporting
+            quality for stakeholders.
+          </p>
+        </article>
+
+        <!-- Teleperformance / Mastercard -->
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-role">Technical Support Engineer – Payment Processing Systems</div>
+          <div class="timeline-meta">Teleperformance, Indore (Mastercard Global Operations) • July 2018 – June 2020</div>
+          <p>
+            Delivered Tier-2 support for payment authorization systems and merchant transaction failures in a
+            high-availability environment.
+          </p>
+          <p>
+            Performed log analysis and RCA documentation that improved stability and reduced recurrence of
+            payment failures.
+          </p>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- Services -->
+    <section id="services">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-eyebrow">Services</div>
+          <h2 class="section-title">How I can help as a Technical Support Engineer.</h2>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <article class="card reveal">
+          <div class="card-icon">
+            <i class="ri-customer-service-2-line"></i>
+          </div>
+          <h3 class="card-title">Technical & Application Support</h3>
+          <p class="card-meta">
+            Handling user queries, incidents, and application issues with clear communication and step-by-step
+            troubleshooting.
+          </p>
+          <div class="chip-row">
+            <span class="chip">L1 / L2 support</span>
+            <span class="chip">User communication</span>
+            <span class="chip">Ticket updates</span>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon">
+            <i class="ri-bug-line"></i>
+          </div>
+          <h3 class="card-title">Incident Analysis & RCA Notes</h3>
+          <p class="card-meta">
+            Analyzing recurring issues, checking patterns, and creating simple RCA and prevention suggestions for
+            teams.
+          </p>
+          <div class="chip-row">
+            <span class="chip">Logs</span>
+            <span class="chip">Monitoring</span>
+            <span class="chip">RCA & KB</span>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon">
+            <i class="ri-cloud-line"></i>
+          </div>
+          <h3 class="card-title">Support-friendly DevOps Practices</h3>
+          <p class="card-meta">
+            Using DevOps basics to understand deployments, containers, and infra so support is faster and more
+            informed.
+          </p>
+          <div class="chip-row">
+            <span class="chip">GitHub</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Terraform / K8s (labs)</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+         <!-- Projects -->
+   <section id="projects">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-eyebrow">Projects</div>
+      <h2 class="section-title">Real projects connecting support thinking with DevOps & web.</h2>
+    </div>
+    <p class="section-subtitle">
+      These projects show incident analysis, DevOps lab work, and clean front-end websites I’ve built.
+    </p>
+  </div>
+
+  <div class="grid-3">
+    <!-- 1. Incident Analyzer -->
+    <article class="card reveal">
+      <div class="project-thumb">
+        <div>
+          <div class="project-thumb-main">Incident Analyzer – DevOps · Cloud · Security lab</div>
+          <div class="project-thumb-sub">
+            Lab project focused on incidents, infra and security.
+          </div>
+        </div>
+        <div class="project-thumb-pill">GitHub · Docker · Terraform · K8s</div>
+      </div>
+
+      <h3 class="card-title">Incident Analyzer (DevOps-Cloud-Security Lab)</h3>
+      <p class="card-meta">
+        A GitHub-based lab where I practice incident-style thinking with DevOps tools — using Docker,
+        Terraform, and Kubernetes concepts to simulate modern infrastructure and security-oriented setups.
+      </p>
+      <div class="chip-row">
+        <span class="chip">GitHub</span>
+        <span class="chip">Docker</span>
+        <span class="chip">Terraform</span>
+        <span class="chip">Kubernetes</span>
+      </div>
+      <a href="https://github.com/guptapiyushraj471-cpu/DevOps-Cloud-Security-Engineer-Assessment"
+         class="card-link" target="_blank" rel="noreferrer">
+        View GitHub project
+        <i class="ri-arrow-right-up-line"></i>
+      </a>
+    </article>
+
+    <!-- 2. Ghar Ka Khana -->
+    <article class="card reveal">
+      <div class="project-thumb">
+        <div>
+          <div class="project-thumb-main">Ghar Ka Khana – Food & Veg Website</div>
+          <div class="project-thumb-sub">
+            Home-style vegetarian food ordering UI.
+          </div>
+        </div>
+        <div class="project-thumb-pill">HTML · CSS · JS · JSON</div>
+      </div>
+
+      <h3 class="card-title">Ghar Ka Khana – Food & Veg Website</h3>
+      <p class="card-meta">
+        A clean front-end website concept for home-style vegetarian food, using JSON data for menu items and
+        JavaScript for interactions.
+      </p>
+      <div class="chip-row">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">JSON</span>
+      </div>
+      <a href="https://ghar-ka-khana.vercel.app/"
+         class="card-link" target="_blank" rel="noreferrer">
+        Visit live website
+        <i class="ri-arrow-right-up-line"></i>
+      </a>
+    </article>
+
+    <!-- 3. KPM Global Holiday -->
+    <article class="card reveal">
+      <div class="project-thumb">
+        <div>
+          <div class="project-thumb-main">KPM Global Holiday – Travel & Holiday Site</div>
+          <div class="project-thumb-sub">
+            Travel packages, holidays and tour planning website.
+          </div>
+        </div>
+        <div class="project-thumb-pill">Travel website</div>
+      </div>
+
+      <h3 class="card-title">KPM Global Holiday – Travel & Holiday Site</h3>
+      <p class="card-meta">
+        A travel and holiday website showcasing tour packages, services, and contact options for users
+        planning trips.
+      </p>
+      <div class="chip-row">
+        <span class="chip">Travel website</span>
+        <span class="chip">Tour packages</span>
+        <span class="chip">User-focused content</span>
+      </div>
+      <a href="https://www.kpmglobalholiday.com"
+         class="card-link" target="_blank" rel="noreferrer">
+        Visit live website
+        <i class="ri-arrow-right-up-line"></i>
+      </a>
+    </article>
+
+    <!-- 4. Feeling's Memory -->
+    <article class="card reveal">
+      <div class="project-thumb">
+        <div>
+          <div class="project-thumb-main">Feeling’s Memory – Custom Print Service</div>
+          <div class="project-thumb-sub">
+            Concept website for custom print gifts and photo products.
+          </div>
+        </div>
+        <div class="project-thumb-pill">Front-end UI</div>
+      </div>
+
+      <h3 class="card-title">Feeling’s Memory – Custom Print Service</h3>
+      <p class="card-meta">
+        A custom print service website concept for photo frames, mugs, and gift items. Focused on simple
+        layout and clear calls-to-action.
+      </p>
+      <div class="chip-row">
+        <span class="chip">Front-end UI</span>
+        <span class="chip">Product listing</span>
+        <span class="chip">User-friendly layout</span>
+      </div>
+      <a href="https://feeling-s-memory-custom-print-servi.vercel.app/"
+         class="card-link" target="_blank" rel="noreferrer">
+        Visit live website
+        <i class="ri-arrow-right-up-line"></i>
+      </a>
+    </article>
+  </div>  
+</section>
+
+
+
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-eyebrow">Testimonials</div>
+          <h2 class="section-title">Feedback on my support & ownership.</h2>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <article class="card reveal">
+          <h3 class="card-title">Team Lead</h3>
+          <p class="testimonial-quote">
+            “Piyush takes complete ownership of tickets. Users get timely updates, and he doesn’t drop an issue until it’s fully closed.”
+          </p>
+          <p class="card-meta">On handling L1/L2 tickets and escalations.</p>
+        </article>
+
+        <article class="card reveal">
+          <h3 class="card-title">Senior Engineer</h3>
+          <p class="testimonial-quote">
+            “His incident notes and reproduction steps make debugging much easier for the dev team.”
+          </p>
+          <p class="card-meta">On quality of incident analysis and logs.</p>
+        </article>
+
+        <article class="card reveal">
+          <h3 class="card-title">Manager</h3>
+          <p class="testimonial-quote">
+            “He is curious about the tech behind the issues and is actively building DevOps skills — that shows in the kind of questions he asks.”
+          </p>
+          <p class="card-meta">On learning DevOps and cloud.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-eyebrow">Blog</div>
+          <h2 class="section-title">Notes from support, incidents & learning.</h2>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <article class="card reveal">
+          <h3 class="card-title">What Support Teaches About Systems</h3>
+          <p class="card-meta">
+            How working on tickets and user calls builds a strong understanding of how real systems fail in
+            production.
+          </p>
+          <a href="#" class="card-link">
+            Read draft
+            <i class="ri-arrow-right-up-line"></i>
+          </a>
+        </article>
+
+        <article class="card reveal">
+          <h3 class="card-title">Writing Better Incident Notes</h3>
+          <p class="card-meta">
+            Small habits in documentation that save time for support, engineers, and managers during critical
+            incidents.
+          </p>
+          <a href="#" class="card-link">
+            Read draft
+            <i class="ri-arrow-right-up-line"></i>
+          </a>
+        </article>
+
+        <article class="card reveal">
+          <h3 class="card-title">Why I Started Learning DevOps</h3>
+          <p class="card-meta">
+            Connecting daily support work with Git, Docker, Terraform, and Kubernetes to see the full picture.
+          </p>
+          <a href="#" class="card-link">
+            Read draft
+            <i class="ri-arrow-right-up-line"></i>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-eyebrow">Contact</div>
+          <h2 class="section-title">Let’s talk about your support & operations needs.</h2>
+        </div>
+        <p class="section-subtitle">
+          If you’re hiring for Technical Support, Application Support, or related roles, I’d be happy to discuss
+          how I can help.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <form class="reveal" id="contactForm">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            How can I help?
+            <textarea name="message" placeholder="Share your role, tech stack, or challenges..." required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary" style="justify-content: center; margin-top: 0.3rem;">
+            <i class="ri-send-plane-line"></i>
+            Send Message
+          </button>
+          <small style="font-size: 0.7rem; color: var(--muted);">
+            Demo only — connect via email or LinkedIn below for real conversations.
+          </small>
+        </form>
+
+        <aside class="contact-aside reveal">
+          <p>
+            I’m based in Indore, India (IST) and comfortable with remote communication, documentation, and shift
+            work if required.
+          </p>
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="ri-mail-line"></i>
+              </div>
+              <div>
+                <div>Email</div>
+                <a href="mailto:gupta.piyushraj471@gmail.com">gupta.piyushraj471@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="ri-linkedin-box-line"></i>
+              </div>
+              <div>
+                <div>LinkedIn</div>
+                <a href="#" target="_blank" rel="noreferrer">linkedin.com/in/piyush-gupta</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="ri-github-line"></i>
+              </div>
+              <div>
+                <div>GitHub</div>
+                <a href="https://github.com/guptapiyushraj471-cpu" target="_blank" rel="noreferrer">github.com/guptapiyushraj471-cpu</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="ri-map-pin-line"></i>
+              </div>
+              <div>
+                <div>Location</div>
+                <span>Indore, Madhya Pradesh, India (Remote-ready)</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="layout footer-row">
+      <p>© <span id="year"></span> Piyush Gupta. All rights reserved.</p>
+      <div class="social-row">
+        <a class="social-icon" href="#" aria-label="LinkedIn" target="_blank" rel="noreferrer">
+          <i class="ri-linkedin-fill"></i>
+        </a>
+        <a class="social-icon" href="https://github.com/guptapiyushraj471-cpu" aria-label="GitHub" target="_blank" rel="noreferrer">
+          <i class="ri-github-fill"></i>
+        </a>
+        <a class="social-icon" href="mailto:gupta.piyushraj471@gmail.com" aria-label="Email">
+          <i class="ri-mail-line"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile nav
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => navLinks.classList.remove("open"));
+    });
+
+    // Theme toggle with localStorage
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+    let currentMode = "light";
+
+    const applyTheme = (mode) => {
+      if (mode === "light") {
+        document.body.classList.add("light-theme");
+        themeIcon.classList.remove("ri-sun-line");
+        themeIcon.classList.add("ri-moon-line");
+      } else {
+        document.body.classList.remove("light-theme");
+        themeIcon.classList.remove("ri-moon-line");
+        themeIcon.classList.add("ri-sun-line");
+      }
+      currentMode = mode;
+    };
+
+    const savedTheme = window.localStorage.getItem("theme-mode");
+    applyTheme(savedTheme || "light");
+
+    themeToggle.addEventListener("click", () => {
+      const newMode = currentMode === "light" ? "dark" : "light";
+      applyTheme(newMode);
+      window.localStorage.setItem("theme-mode", newMode);
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll(".reveal");
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
+
+    reveals.forEach((el) => io.observe(el));
+
+    // Animate skill bars
+    const skillBars = document.querySelectorAll(".skill-bar-fill");
+    const skillObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const value = el.getAttribute("data-skill");
+            el.style.width = value + "%";
+            skillObserver.unobserve(el);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    skillBars.forEach((el) => skillObserver.observe(el));
+
+    // Contact form demo
+    const contactForm = document.getElementById("contactForm");
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Thanks for reaching out! For real conversations, please contact me via email or LinkedIn.");
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>

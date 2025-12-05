@@ -1,0 +1,20 @@
+[
+  {
+    "title": "AI Incident Analyzer",
+    "tagline": "GPT-powered insights for IT incidents",
+    "description": "Automates incident categorization and resolution suggestions using Excel + GPT + Python.",
+    "tech": ["Python", "OpenAI API", "Excel", "Pandas"],
+    "repo": "https://github.com/guptapiyushraj471-cpu/PG_Portfolio_AI/tree/main/ai-incident-analyzer",
+    "status": "Completed",
+    "year": "2025"
+  },
+  {
+    "title": "IT Asset Management Tracker",
+    "tagline": "Smart asset tracking and analytics",
+    "description": "Monitor assets, lifecycle, and costs with alerts and trend analytics.",
+    "tech": ["Power BI", "Excel", "Python"],
+    "repo": "https://github.com/guptapiyushraj471-cpu/PG_Portfolio_AI/tree/main/it-asset-tracker",
+    "status": "Completed",
+    "year": "2025"
+  }
+]
